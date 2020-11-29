@@ -1,0 +1,43 @@
+# variables:
+#   DOCKER_DRIVER: overlay
+#   SPRING_PROFILES_ACTIVE: prod
+#   USER_GITLAB: eriksonlb
+#   APP_NAME: ws-marcaponto
+#   HEROKU_API_KEY: $HEROKU_API_KEY  
+#   REPO: ws-marcaponto
+
+# stages:
+#   - build
+#   - deploy-heroku
+# - tests
+# - release
+
+# build:
+#   stage: build
+#   image: maven:latest
+#   script: 
+#   - mvn package -B
+#   artifacts:
+#     paths:
+#       - target/*.jar
+
+# deploy-heroku:
+#     stage: deploy-heroku
+#     image: ruby
+#     before_script:
+#     - apt-get update -qy
+#     - apt-get install -y ruby-dev
+#     - gem install dpl
+#     script:
+#     - dpl --provider=heroku --app=$APP_NAME --api-key=$HEROKU_API_KEY
+#     environment:
+#       name: staging
+#       url: https://ws-marcaponto.herokuapp.com/
+
+# tests:
+#  stage: tests
+#  image: python:3.8
+#  script:
+#  - cd integrationtests
+#  - pip3 install -r requirements.txt
+#  - behave features/post.feature features/get.feature features/delete.feature 
