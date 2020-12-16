@@ -1,7 +1,7 @@
 # Marca Ponto
 ## Spring Boot Web Service
 
-*Projeto Interdisciplinar do 5º Semestre da FATEC Indaiatuba*
+*Projeto Interdisciplinar do 6º Semestre da FATEC Indaiatuba*
 ----------------------------------------------------------------------------
 
 
